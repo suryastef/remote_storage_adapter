@@ -1,10 +1,10 @@
 # Dockerfile build for remote_storage_adapter
 A Prometheus storage drive to store data into external TSDB, this will replace built in TSDB from Prometheus.
-This image is based on **alpine** as builder to compile go from source code and using image **scratch** as main image to reduce image size.
+This image is based on **golang:alpine** as builder to compile the *remote_storage_adapter* from source code and using image **scratch** as main image to reduce image size.
 
 ## Testing the container
 
-To test if whether image working, you can run:
+To test whether image working, you can run:
 
 ```sh
 docker container run -d --rm -p 9201:9201 remote_storage_adapter
